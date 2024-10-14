@@ -139,28 +139,46 @@
 
 		<section class="signitures">
 			<strong>Initiated by</strong>
-			<ul>
-				<li>
-					Xinpeng Wei(CECC Postgraduate Student Representative)
-				</li>
-				<li>Yingge Zhao</li>
-				<li>Yichi Zhang</li>
-				<li>Zhengyang Wu</li>
-				<li>Qingjue Wu</li>
+			<ul id="signiture-ul">
 			</ul>
 		</section>
 		<h2>Support the Petition</h2>
 		<p>Help us defend the identity of the CECC and ensure transparency in decision-making. Sign the petition below and
 			share with others to raise awareness.</p>
+
+		<section class="contact-us">
+			<strong>Contact Us: </strong>
+			<a href="mailto:makeCECCGreatAgain@outlook.com">makeCECCGreatAgain@outlook.com</a>
+		</section>
 		<button id="btn">Take Our Survey</button>
+
 	</div>
 	<script>
+		function addSigniture() {
+			const signitureList = [
+				'Xinpeng Wei(CECC Postgraduate Student Representative)',
+				'Yingge Zhao',
+				'Yichi Zhang',
+				'Zhengyang Wu',
+				'Qingjue Wu'
+			]
+			const ul = document.querySelector('#signiture-ul')
+			for (const element of signitureList) {
+				const newItem = document.createElement('li')
+				newItem.textContent = element
+				ul.appendChild(newItem)
+			}
+		}
+
+		addSigniture()
 		const btn = document.querySelector('#btn')
 		btn.addEventListener('click', () => {
 			window.location.href = 'https://forms.gle/ZiyDp3j4mzKDdtCb8'
 		})
 
 	</script>
+
+
 </body>
 
 
